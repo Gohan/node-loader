@@ -10,12 +10,7 @@ import { getCompiler, compile } from './helpers';
 describe('validate options', () => {
   const tests = {
     name: {
-      success: [
-        '[name].[ext]',
-        (resourcePath) => {
-          return path.basename(resourcePath);
-        },
-      ],
+      success: ['[name].[ext]', (resourcePath) => path.basename(resourcePath)],
       failure: [true, false],
     },
     flags: {
